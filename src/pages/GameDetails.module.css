@@ -1,0 +1,138 @@
+.gameDetails {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.gameDetails h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.gameDetails img {
+  max-width: 80%; 
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gameDetails p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.gameDetails h3 {
+  font-size: 1.8rem;
+  color: #2980b9;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.gameDetails ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gameDetails ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  background-color: #ecf0f1;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.gameDetails ul li strong {
+  font-weight: bold;
+  color: #34495e;
+}
+
+.gameDetails ul li span {
+  color: #7f8c8d;
+}
+
+.gameDetails a {
+  display: inline-block;
+  background-color: #27ae60;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; 
+}
+
+.gameDetails a:hover {
+  background-color: #2ecc71;
+}
+
+.gameDetails .screenshots {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.gameDetails .screenshots img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gameDetails .screenshots img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .gameDetails {
+    padding: 10px;
+  }
+
+  .gameDetails h1 {
+    font-size: 2rem;
+  }
+
+  .gameDetails h3 {
+    font-size: 1.5rem;
+  }
+
+  .gameDetails p {
+    font-size: 1rem;
+  }
+
+  .gameDetails .screenshots {
+    flex-direction: column;
+  }
+
+  .gameDetails .screenshots img {
+    max-width: 80%;
+    margin: 10px 0;
+  }
+
+  .gameDetails a {
+    padding: 10px 20px;
+  }
+}
