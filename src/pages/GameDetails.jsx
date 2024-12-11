@@ -16,7 +16,7 @@ const GameDetails = () => {
         setGameDetails(data);
         setLoading(false);
       } catch (error) {
-        setError('Error fetching game details');
+        setError('Error al obtener los detalles del juego');
         setLoading(false);
       }
     };

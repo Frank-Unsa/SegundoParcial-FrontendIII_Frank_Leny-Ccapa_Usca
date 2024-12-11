@@ -47,5 +47,47 @@ describe("Test <ContactPage />", () => {
     expect(inputEmail.value).toBe("fccapau@unsa.edu.pe");
     expect(inputMessage.value).toBe("Este es un mensaje de prueba.");
   });
+  test("Debe mostrar un mensaje de error si los campos no son válidos", async () => {
+    // Arrange
+    render(<ContactPage />);
+  
+    const user = userEvent.setup();
+    const buttonSubmit = screen.getByRole("button", { name: /enviar/i });
+  
+    // Act
+    await user.click(buttonSubmit);
+  
+    // Assert
+    const errorMessage = screen.getByText(/por favor, completa todos los campos correctamente/i);
+    expect(errorMessage).toBeDefined();
+  });
+  test("Debe mostrar un mensaje de error si el nombre o el mensaje son demasiado cortos", async () => {
+    // Arrange
+    render(<ContactPage />);
+  
+    const user = userEvent.setup();
+    const inputName = screen.getByRole("textbox", { name: /nombre/i });
+    const inputMessage = screen.getByRole("textbox", { name: /mensaje/i });
+    const buttonSubmit = screen.getByRole("button", { name: /enviar/i });
+  
+    // Act - Nombre corto
+    await user.type(inputName, "Fr");
+    await user.type(inputMessage, "Este es un mensaje.");
+    await user.click(buttonSubmit);
+  
+    // Assert
+    const errorMessage = screen.getByText(/por favor, completa todos los campos correctamente/i);
+    expect(errorMessage).toBeDefined();
+  
+    // Act - Mensaje corto
+    await user.clear(inputName);
+    await user.type(inputName, "Frank Ccapa");
+    await user.clear(inputMessage);
+    await user.type(inputMessage, "Hola");
+    await user.click(buttonSubmit);
+  
+    // Assert
+    expect(errorMessage).toBeDefined();
+  });
 
 });
