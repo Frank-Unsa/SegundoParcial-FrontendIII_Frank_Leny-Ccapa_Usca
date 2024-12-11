@@ -108,7 +108,9 @@ const Home = () => {
       </div>
 
       <Link to="/favorites" className={styles.goToFavorites}>Ir a favoritos</Link>
-    
+      <div className='content'>
+
+      </div>
     </div>
   );
 };

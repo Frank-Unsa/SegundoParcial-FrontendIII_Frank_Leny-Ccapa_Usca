@@ -19,7 +19,7 @@ export const getGames = async () => {
       const data = await response.json();
       return data;
     } catch (error) {
-      console.error("Error fetching game details:", error);
+      console.error("Error al obtener los detalles del juego:", error);
       throw error;
     }
   };

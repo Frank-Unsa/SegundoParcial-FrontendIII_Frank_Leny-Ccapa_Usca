@@ -1,4 +1,3 @@
-// App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
@@ -8,6 +7,8 @@ import { FavoriteProvider } from './context/FavoriteContext';
 import { FilterProvider } from './context/FilterContext';
 import Navbar from './components/Navbar';
 import ContactPage from './pages/ContactPage';
+import Footer from './components/Footer';
+
 
 const App = () => {
   return (
@@ -23,8 +24,8 @@ const App = () => {
                 <Route path="/favorites" element={<Favorites />} />
                 <Route path="/contact" element={<ContactPage />} />
               </Routes>
-          </div>
-
+            </div>
+            <Footer />
           </Router>
       </FilterProvider>
     </FavoriteProvider>

@@ -4,53 +4,64 @@
     left: 0;
     width: 100%;
     height: 60px;
-    background-color: #333;
-    color: #fff;
+    background-color: #f0f0f0;
+    color: #333;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    /*padding: 0 20px;*/
+    justify-content: space-around;
     z-index: 2;
 }
+
 body {
     padding: 0;
     margin: 0;
 }
+
 .navbar a {
-    text-decoration: none; 
-    color: #fff;
+    text-decoration: none;
+    color: #333; /* Texto oscuro */
     margin: 0 10px;
     font-size: 16px;
 }
+
 .navbar a:hover {
-    color: #00d1b2;
+    color: #008bd1;
 }
+
 .main-content {
     margin-top: 60px;
 }
+
 .logoLink {
-    color: #fff;
+    color: #333;
     font-size: 1.8em;
     text-decoration: none;
     font-weight: bold;
 }
+
 .navLinks {
     list-style: none;
     display: flex;
     gap: 20px;
     margin: 0;
 }
-  
+
 .navLink {
-    color: #fff;
+    color: #333;
     text-decoration: none;
     font-size: 1.1em;
     transition: color 0.3s;
 }
+
 .navLink:hover {
     color: #ff6347;
 }
+
 body {
     padding-top: 60px;
 }
-  
+
+.logoImage {
+    width: 100px;
+    height: auto;
+}
